@@ -8,6 +8,7 @@ import useStore from "../../store";
 const BottomHeader = () => {
   const breakPoint = 1165;
   const startYRef = useRef<number | null>(null);
+  const divRef = useRef<HTMLDivElement>(null);
   const [showElement, setShowElement] = useState(false);
   const [isTextAppear, setIsTextAppear] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
@@ -129,17 +130,44 @@ const BottomHeader = () => {
     window.removeEventListener("mouseup", handleMouseUp);
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleNativeTouchStart = (e: TouchEvent) => {
     startYRef.current = e.touches[0].clientY;
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleNativeTouchMove = (e: TouchEvent) => {
+    e.preventDefault();
     handleDrag(e.touches[0].clientY);
   };
 
-  const handleTouchEnd = () => {
+  const handleNativeTouchEnd = () => {
     startYRef.current = null;
   };
+
+  const handleReactTouchStart: React.TouchEventHandler<
+    HTMLDivElement
+  > = () => {};
+  const handleReactTouchMove: React.TouchEventHandler<
+    HTMLDivElement
+  > = () => {};
+
+  useEffect(() => {
+    const div = divRef.current;
+    if (!div) return;
+
+    div.addEventListener("touchstart", handleNativeTouchStart, {
+      passive: false,
+    });
+    div.addEventListener("touchmove", handleNativeTouchMove, {
+      passive: false,
+    });
+    div.addEventListener("touchend", handleNativeTouchEnd, { passive: false });
+
+    return () => {
+      div.removeEventListener("touchstart", handleNativeTouchStart);
+      div.removeEventListener("touchmove", handleNativeTouchMove);
+      div.removeEventListener("touchend", handleNativeTouchEnd);
+    };
+  }, []);
 
   return width <= breakPoint ? (
     <div
@@ -148,10 +176,10 @@ const BottomHeader = () => {
       }`}
     >
       <div
+        ref={divRef}
         onMouseDown={handleMouseDown}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onTouchStart={handleReactTouchStart}
+        onTouchMove={handleReactTouchMove}
         className={`z-1000 h-[60px] bg-green-400 fixed ${
           showElement ? "bottom-[40px]" : "bottom-0"
         }  left-0 w-full`}
