@@ -11,7 +11,7 @@ const HeroSection = () => {
         alt="Hero Section Image"
         className="absolute inset-0 object-cover w-full h-full"
       />
-      <div className="flex flex-col items-center justify-center mx-auto h-full">
+      <div className="flex flex-col items-center justify-center mx-[20px] h-full">
         <h1 className="text-white text-5xl text-center font-bold z-50 max-[515px]:text-4xl max-[400px]:text-[25px]">
           Welcome to GARAPT
         </h1>
