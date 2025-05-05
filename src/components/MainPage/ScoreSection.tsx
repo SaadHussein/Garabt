@@ -215,7 +215,7 @@ const ScoreSection = () => {
               {<NumberCounter number={651} />}M
             </h2>
 
-            <p className="rating-card-subtitle">Unhappy Customers</p>
+            <p className="rating-card-subtitle">Angry Customers</p>
 
             <div className="wave-bg">
               <svg
