@@ -52,16 +52,57 @@ const BottomHeader = () => {
     };
   }, []);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    startYRef.current = e.clientY;
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
-  };
+  // const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   startYRef.current = e.clientY;
+  //   window.addEventListener("mousemove", handleMouseMove);
+  //   window.addEventListener("mouseup", handleMouseUp);
+  // };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  // const handleMouseMove = (e: MouseEvent) => {
+  //   if (startYRef.current === null) return;
+
+  //   const diffY = e.clientY - startYRef.current!;
+
+  //   if (diffY < -30) {
+  //     setShowElement(true);
+  //     setIsTextAppear(true);
+  //   } else if (diffY > 30) {
+  //     setShowElement(false);
+  //     setIsTextAppear(false);
+  //   }
+  // };
+
+  // const handleMouseUp = () => {
+  //   window.removeEventListener("mousemove", handleMouseMove);
+  //   window.removeEventListener("mouseup", handleMouseUp);
+  // };
+
+  // const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+  //   startYRef.current = e.touches[0].clientY;
+  // };
+
+  // const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+  //   if (startYRef.current === null) return;
+
+  //   const currentY = e.touches[0].clientY;
+  //   const diffY = currentY - startYRef.current;
+
+  //   if (diffY < -30) {
+  //     setShowElement(true);
+  //     setIsTextAppear(true);
+  //   } else if (diffY > 30) {
+  //     setShowElement(false);
+  //     setIsTextAppear(false);
+  //   }
+  // };
+
+  // const handleTouchEnd = () => {
+  //   startYRef.current = null;
+  // };
+
+  const handleDrag = (currentY: number) => {
     if (startYRef.current === null) return;
-
-    const diffY = e.clientY - startYRef.current!;
+    const diffY = currentY - startYRef.current;
 
     if (diffY < -30) {
       setShowElement(true);
@@ -72,20 +113,48 @@ const BottomHeader = () => {
     }
   };
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    startYRef.current = e.clientY;
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    handleDrag(e.clientY);
+  };
+
   const handleMouseUp = () => {
+    startYRef.current = null;
     window.removeEventListener("mousemove", handleMouseMove);
     window.removeEventListener("mouseup", handleMouseUp);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    startYRef.current = e.touches[0].clientY;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    handleDrag(e.touches[0].clientY);
+  };
+
+  const handleTouchEnd = () => {
+    startYRef.current = null;
+  };
+
   return width <= breakPoint ? (
-    <>
+    <div
+      className={`fixed bottom-0 left-0 w-full transform transition-transform duration-500 ease-in-out ${
+        showBottomHeader ? "translate-y-0" : "translate-y-[85px]"
+      }`}
+    >
       <div
         onMouseDown={handleMouseDown}
-        className={`z-10000 h-[60px] bg-green-400 fixed ${
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        className={`z-1000 h-[60px] bg-green-400 fixed ${
           showElement ? "bottom-[40px]" : "bottom-0"
-        }  left-0 w-full transform transition-transform duration-500 ease-in-out ${
-          showBottomHeader ? "translate-y-0" : "translate-y-[85px]"
-        }`}
+        }  left-0 w-full`}
       >
         <div className="flex justify-center items-center h-full px-4 gap-12 max-[435px]:gap-6 max-[300px]:gap-5">
           <div className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600">
@@ -116,19 +185,21 @@ const BottomHeader = () => {
         </div>
       </div>
 
-      <div
-        className={`transform transition-transform duration-300 ease-in-out ${
-          showElement ? "translate-y-0" : "translate-y-[40px]"
-        } h-[40px] bg-green-400 text-center w-full fixed bottom-0 left-0 flex justify-center items-center text-white font-semibold text-md max-[465px]:text-sm max-[365px]:text-xs`}
-      >
-        <div className="text-center flex items-center gap-1.5">
-          Can't find a listing ?{" "}
-          <p className="underline cursor-pointer">
-            Click here and we'll add it for you!
-          </p>
+      {showElement ? (
+        <div
+          className={`touch-none h-[40px] bg-green-400 text-center w-full fixed bottom-0 left-0 flex justify-center items-center text-white font-semibold text-md max-[465px]:text-sm max-[365px]:text-xs`}
+        >
+          <div className="text-center flex items-center gap-1.5">
+            Can't find a listing ?{" "}
+            <p className="underline cursor-pointer">
+              Click here and we'll add it for you!
+            </p>
+          </div>
         </div>
-      </div>
-    </>
+      ) : (
+        <></>
+      )}
+    </div>
   ) : (
     <></>
   );
