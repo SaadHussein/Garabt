@@ -8,14 +8,14 @@ const ScoreSection = () => {
   const country = useStore((state) => state.country);
   const countryCode = useStore((state) => state.countryCode);
   return (
-    <div className="py-8 flex items-center justify-center flex-col">
+    <div className="py-10 flex items-center justify-center flex-col">
       <div className="flex items-center gap-2 mb-4">
         <div className="flex items-center w-[45px] h-[45px]">
           <Flag code={countryCode} />
         </div>
         <h2 className="font-semibold text-2xl">{country} Satisfaction</h2>
       </div>
-      <div className="w-full px-10 max-w-[1365px] business-rating-top">
+      <div className="w-full px-5 max-w-[1365px] business-rating-top">
         <div className="business-rating-card total-rating-card">
           <div className="business-rating-content">
             <div className="rate-count">
