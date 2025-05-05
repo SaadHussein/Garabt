@@ -1,7 +1,7 @@
 import "./ScoreSection.css";
-import useStore from "../../store";
+import useStore from "../../../store";
 import Flag from "react-world-flags";
-import NumberCounter from "../Global/NumberCounter";
+import NumberCounter from "../../Global/NumberCounter";
 import { FaRegStar, FaStar } from "react-icons/fa6";
 
 const ScoreSection = () => {
