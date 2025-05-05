@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App.tsx";
-import MainPage from "./components/pages/MainPage/MainPage.tsx";
+import MainPage from "./pages/MainPage/MainPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

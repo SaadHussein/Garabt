@@ -16,6 +16,7 @@ const Header = () => {
     (state) => state.setOpenMobileNavigation
   );
   const setCountryCode = useStore((state) => state.setCountryCode);
+  const setCountry = useStore((state) => state.setCountry);
   const setLanguage = useStore((state) => state.setLanguage);
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -49,6 +50,7 @@ const Header = () => {
       .then((res) => res.json())
       .then((data) => {
         setCountryCode(data.country_code_iso3);
+        setCountry(data.country_name);
       })
       .catch((err) => {
         console.error("Failed to fetch country", err);

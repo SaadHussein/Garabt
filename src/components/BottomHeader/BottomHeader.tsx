@@ -53,54 +53,6 @@ const BottomHeader = () => {
     };
   }, []);
 
-  // const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-  //   startYRef.current = e.clientY;
-  //   window.addEventListener("mousemove", handleMouseMove);
-  //   window.addEventListener("mouseup", handleMouseUp);
-  // };
-
-  // const handleMouseMove = (e: MouseEvent) => {
-  //   if (startYRef.current === null) return;
-
-  //   const diffY = e.clientY - startYRef.current!;
-
-  //   if (diffY < -30) {
-  //     setShowElement(true);
-  //     setIsTextAppear(true);
-  //   } else if (diffY > 30) {
-  //     setShowElement(false);
-  //     setIsTextAppear(false);
-  //   }
-  // };
-
-  // const handleMouseUp = () => {
-  //   window.removeEventListener("mousemove", handleMouseMove);
-  //   window.removeEventListener("mouseup", handleMouseUp);
-  // };
-
-  // const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-  //   startYRef.current = e.touches[0].clientY;
-  // };
-
-  // const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-  //   if (startYRef.current === null) return;
-
-  //   const currentY = e.touches[0].clientY;
-  //   const diffY = currentY - startYRef.current;
-
-  //   if (diffY < -30) {
-  //     setShowElement(true);
-  //     setIsTextAppear(true);
-  //   } else if (diffY > 30) {
-  //     setShowElement(false);
-  //     setIsTextAppear(false);
-  //   }
-  // };
-
-  // const handleTouchEnd = () => {
-  //   startYRef.current = null;
-  // };
-
   const handleDrag = (currentY: number) => {
     if (startYRef.current === null) return;
     const diffY = currentY - startYRef.current;
