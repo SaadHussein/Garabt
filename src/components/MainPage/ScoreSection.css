@@ -1,0 +1,313 @@
+.business-rating-top {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 21px;
+  z-index: 0;
+}
+
+.business-rating-card {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+}
+
+.total-rating-card {
+  grid-column: 1 / 4;
+}
+
+.business-rating-card .wave-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.business-rating-card .wave-bg svg {
+  width: 100%;
+  height: auto;
+}
+
+.business-rating-card .business-rating-content {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 15px 10px;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.business-rating-card .business-rating-content .rate-stars-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.total-rating-card .business-rating-content {
+  background-color: #0099ff;
+}
+
+.business-rating-card .rate-count {
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.business-rating-card .rate-count .rate-count-icon {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 0.25rem;
+}
+
+.business-rating-card .rate-count .rate-count-title {
+  color: #fff;
+  font-weight: 500;
+}
+
+.business-rating-card .rate-count .rate-count-num {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.business-rating-card .rate-stars-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.business-rating-card .rate-stars-item:not(:last-child) {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e5e5e599;
+}
+
+.business-rating-card .rate-stars-item-average {
+  justify-content: space-between;
+}
+
+.business-rating-card .rate-stars-item-average .average-txt {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.business-rating-card .rate-stars-item .rate-stars-num {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.business-rating-card .rate-stars-item .rate-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.business-rating-card .rate-stars-item .rate-stars svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* agree-card */
+
+.business-rating-card.agree-card .business-rating-content {
+  background-color: #77c148;
+}
+
+.business-rating-card.disagree-card .business-rating-content {
+  background-color: #f47856;
+}
+
+.business-rating-card.small-card .business-rating-content {
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-rating-card.small-card .business-rating-content .rating-card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: -15px;
+}
+
+.business-rating-card.small-card .business-rating-content .rating-card-title {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.business-rating-card.small-card
+  .business-rating-content
+  .rating-card-subtitle {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* rank card */
+
+.business-rating-card.rank-card.local .business-rating-content {
+  background-color: #ee5470;
+}
+
+.business-rating-card.rank-card.global .business-rating-content {
+  background-color: #726db0;
+}
+
+.business-rating-card.rank-card.male-reviews .business-rating-content {
+  background-color: #3ec0c2;
+}
+
+.business-rating-card.rank-card.female-reviews .business-rating-content {
+  background-color: #28b0e2;
+}
+
+/* --------- */
+
+.business-rating-card.rank-card .business-rating-content {
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.business-rating-card.rank-card .rank-card-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.business-rating-card.rank-card .rank-card-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.business-rating-card.rank-card .rank-img {
+  margin-left: auto;
+}
+
+.business-rating-card.rank-card .rank-img img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.business-rating-card.rank-card .rank-img svg {
+  width: 25px;
+  height: 25px;
+  color: #fff;
+}
+
+/* afford-card #4468b2 */
+
+.business-rating-card.afford-card .business-rating-content {
+  background-color: #4468b2;
+}
+
+.business-rating-card.afford-card .afford-card-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.business-rating-card.afford-card .afford-card-images svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .business-rating-top {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .business-rating-top {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .business-rating-card .business-rating-content {
+    flex-wrap: wrap;
+  }
+
+  .total-rating-card .business-rating-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .business-rating-card .rate-count {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .business-rating-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .total-rating-card {
+    grid-column: 1 / 3;
+  }
+
+  .business-rating-card {
+    padding: 8px;
+  }
+
+  .business-rating-card .business-rating-content {
+    padding: 12px 8px;
+  }
+
+  .business-rating-card.rank-card .rank-card-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .business-rating-card .business-rating-content .rate-stars-container {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .total-rating-card .business-rating-content {
+    padding: 20px 15px;
+  }
+
+  .business-rating-card
+    .business-rating-content
+    .rate-stars-content:first-of-type {
+    border-bottom: 1px solid #e5e5e599;
+    padding-bottom: 10px;
+  }
+
+  .business-rating-card .rate-stars-item:not(:last-child) {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .business-rating-card .rate-stars-item {
+    justify-content: space-between;
+  }
+}
