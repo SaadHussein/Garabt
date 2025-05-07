@@ -5,12 +5,12 @@ const AnimatedStars = ({
   rating = 5,
   delay = 200,
   numberOfStars = 5,
-  gap = 0,
+  gap = false,
 }: {
   rating: number;
   delay: number;
   numberOfStars: number;
-  gap?: number;
+  gap?: boolean;
 }) => {
   const [filled, setFilled] = useState(0);
 
@@ -24,7 +24,7 @@ const AnimatedStars = ({
   }, [filled, rating, delay]);
 
   return (
-    <div className={`flex gap-[${gap}px]`}>
+    <div className={`flex ${gap ? "gap-1" : ""}`}>
       {[...Array(numberOfStars)].map((_, index) => (
         <FaStar
           key={index}

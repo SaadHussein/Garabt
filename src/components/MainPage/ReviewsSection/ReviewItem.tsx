@@ -24,7 +24,9 @@ const ReviewItem = ({ index }: { index: number }) => {
             className="w-12 h-12 rounded-full"
           />
           <div className="flex flex-col items-start justify-start">
-            <h1 className="text-sm font-semibold text-white">John Doe</h1>
+            <h1 className="text-sm font-semibold text-white text-[12px]">
+              John Doe
+            </h1>
           </div>
           <img
             src="/happy.png"
@@ -50,7 +52,12 @@ const ReviewItem = ({ index }: { index: number }) => {
             <div className="flex items-center justify-start">
               <p className="font-semibold text-[14px]">Gave it:</p>
               <div className="flex items-center justify-start ml-1">
-                <AnimatedStars numberOfStars={5} delay={400} rating={5} />
+                <AnimatedStars
+                  numberOfStars={5}
+                  delay={400}
+                  rating={5}
+                  gap={false}
+                />
               </div>
             </div>
             <p className="text-[12px] text-gray-500">4 days</p>

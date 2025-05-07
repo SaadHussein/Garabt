@@ -42,7 +42,7 @@ const ScoreSection = () => {
                       numberOfStars={5}
                       delay={300}
                       rating={5}
-                      gap={4}
+                      gap={true}
                     />
                   </div>
                 </div>
@@ -57,7 +57,7 @@ const ScoreSection = () => {
                       numberOfStars={4}
                       delay={300}
                       rating={4}
-                      gap={4}
+                      gap={true}
                     />
                     <FaRegStar fill="#ffffff96" />
                   </div>
@@ -73,7 +73,7 @@ const ScoreSection = () => {
                       numberOfStars={3}
                       delay={300}
                       rating={3}
-                      gap={4}
+                      gap={true}
                     />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
@@ -92,7 +92,7 @@ const ScoreSection = () => {
                       numberOfStars={2}
                       delay={300}
                       rating={2}
-                      gap={4}
+                      gap={true}
                     />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
@@ -110,7 +110,7 @@ const ScoreSection = () => {
                       numberOfStars={1}
                       delay={300}
                       rating={1}
-                      gap={4}
+                      gap={true}
                     />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
