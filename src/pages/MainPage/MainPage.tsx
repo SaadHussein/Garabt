@@ -1,6 +1,7 @@
 import HeroSection from "../../components/MainPage/HeroSection";
 import ReviewsSection from "../../components/MainPage/ReviewsSection/ReviewsSection";
 import ScoreSection from "../../components/MainPage/ScoreSection/ScoreSection";
+import TopBusinesses from "../../components/MainPage/TopBusinesses/TopBusinesses";
 
 const MainPage = () => {
   return (
@@ -8,6 +9,7 @@ const MainPage = () => {
       <HeroSection />
       <ScoreSection />
       <ReviewsSection />
+      <TopBusinesses />
     </div>
   );
 };

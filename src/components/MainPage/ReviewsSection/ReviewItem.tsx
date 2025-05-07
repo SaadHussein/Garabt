@@ -12,7 +12,7 @@ const ReviewItem = ({ index }: { index: number }) => {
 
   return (
     <div
-      className={`my-1 w-full px-2 py-3 ${
+      className={`my-1 w-full px-2 min-[1165px]:px-4 py-3 ${
         index % 2 === 0 ? "bg-green-400" : "bg-blue-400"
       } rounded-md`}
     >
@@ -35,14 +35,18 @@ const ReviewItem = ({ index }: { index: number }) => {
           />
         </div>
         <div className="flex items-start justify-start flex-col flex-1 h-full">
-          <h2 className="text-white font-semibold text-[16px]">Busines Name</h2>
+          <h2 className="text-white font-semibold text-[16px] min-[1165px]:text-[18px]">
+            Busines Name
+          </h2>
           <div
             className={`${
               isArabic("Saaaad") ? "text-end" : "text-start"
             } text-end w-full`}
           >
-            <p className="text-[14px] font-medium">Saaaad</p>
-            <p className="text-[12px] font-medium">
+            <p className="text-[14px] font-medium min-[1165px]:text-[16px]">
+              Saaaad
+            </p>
+            <p className="text-[12px] font-medium min-[1165px]:text-[16px]">
               {truncateText(
                 "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, asperiores."
               )}

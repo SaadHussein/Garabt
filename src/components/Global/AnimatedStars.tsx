@@ -6,11 +6,13 @@ const AnimatedStars = ({
   delay = 200,
   numberOfStars = 5,
   gap = false,
+  size,
 }: {
   rating: number;
   delay: number;
   numberOfStars: number;
   gap?: boolean;
+  size?: number;
 }) => {
   const [filled, setFilled] = useState(0);
 
@@ -27,6 +29,7 @@ const AnimatedStars = ({
     <div className={`flex ${gap ? "gap-1" : ""}`}>
       {[...Array(numberOfStars)].map((_, index) => (
         <FaStar
+          size={size}
           key={index}
           color={index < filled ? "gold" : "lightgray"}
           className="transition-colors duration-300"
