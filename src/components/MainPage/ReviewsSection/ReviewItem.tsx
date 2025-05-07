@@ -1,4 +1,4 @@
-import { FaStar } from "react-icons/fa6";
+import AnimatedStars from "../../Global/AnimatedStars";
 
 const ReviewItem = ({ index }: { index: number }) => {
   const isArabic = (text: string) => {
@@ -45,11 +45,7 @@ const ReviewItem = ({ index }: { index: number }) => {
             <div className="flex items-center justify-start">
               <p className="font-semibold text-[14px]">Gave it:</p>
               <div className="flex items-center justify-start ml-1">
-                <FaStar color="gold" />
-                <FaStar color="gold" />
-                <FaStar color="gold" />
-                <FaStar color="gold" />
-                <FaStar color="gold" />
+                <AnimatedStars numberOfStars={5} delay={400} rating={5} />
               </div>
             </div>
             <p className="text-[12px] text-gray-500">4 days</p>

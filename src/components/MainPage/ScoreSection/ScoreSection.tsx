@@ -3,6 +3,8 @@ import useStore from "../../../store";
 import Flag from "react-world-flags";
 import NumberCounter from "../../Global/NumberCounter";
 import { FaRegStar, FaStar } from "react-icons/fa6";
+import AnimatedStars from "../../Global/AnimatedStars";
+import CountUp from "react-countup";
 
 const ScoreSection = () => {
   const country = useStore((state) => state.country);
@@ -31,14 +33,17 @@ const ScoreSection = () => {
             <div className="rate-stars-container">
               <div className="rate-stars-content">
                 <div className="rate-stars-item">
-                  <p className="rate-stars-num">1.25M</p>
+                  <p className="rate-stars-num">
+                    <CountUp end={1_250_000} start={0} duration={3} />
+                  </p>
 
                   <div className="rate-stars">
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
+                    <AnimatedStars
+                      numberOfStars={5}
+                      delay={300}
+                      rating={5}
+                      gap={4}
+                    />
                   </div>
                 </div>
 
@@ -46,10 +51,12 @@ const ScoreSection = () => {
                   <p className="rate-stars-num">1.25M</p>
 
                   <div className="rate-stars">
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
+                    <AnimatedStars
+                      numberOfStars={4}
+                      delay={300}
+                      rating={4}
+                      gap={4}
+                    />
                     <FaRegStar fill="#ffffff96" />
                   </div>
                 </div>
@@ -58,9 +65,12 @@ const ScoreSection = () => {
                   <p className="rate-stars-num">1.25M</p>
 
                   <div className="rate-stars">
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
+                    <AnimatedStars
+                      numberOfStars={3}
+                      delay={300}
+                      rating={3}
+                      gap={4}
+                    />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
                   </div>
@@ -72,8 +82,12 @@ const ScoreSection = () => {
                   <p className="rate-stars-num">1.25M</p>
 
                   <div className="rate-stars">
-                    <FaStar fill="gold" />
-                    <FaStar fill="gold" />
+                    <AnimatedStars
+                      numberOfStars={2}
+                      delay={300}
+                      rating={2}
+                      gap={4}
+                    />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
@@ -84,7 +98,12 @@ const ScoreSection = () => {
                   <p className="rate-stars-num">1.25M</p>
 
                   <div className="rate-stars">
-                    <FaStar fill="gold" />
+                    <AnimatedStars
+                      numberOfStars={1}
+                      delay={300}
+                      rating={1}
+                      gap={4}
+                    />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />
                     <FaRegStar fill="#ffffff96" />

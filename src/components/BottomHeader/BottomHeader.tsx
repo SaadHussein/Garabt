@@ -136,7 +136,7 @@ const BottomHeader = () => {
           showElement ? "bottom-[40px]" : "bottom-0"
         }  left-0 w-full`}
       >
-        <div className="flex justify-center items-center h-full px-4 gap-12 max-[435px]:gap-6 max-[300px]:gap-5">
+        <div className="flex justify-between items-center h-full px-4 mx-auto max-w-[775px]">
           <div className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600">
             <AiFillHome size={width > 320 ? 28 : 22} />
           </div>

@@ -68,7 +68,7 @@ const Header = () => {
   return (
     <nav className="w-[100%] px-8 h-[75px] bg-green-400 z-[10000] fixed top-0 left-0">
       <div className="flex justify-between items-center h-full">
-        <div className="text-2xl font-bold text-white">GARAPT</div>
+        <img src="/garabt.png" alt="logo" className="w-14 h-14" />
         {width > 1165 ? (
           <ul className="flex items-center space-x-4 text-white font-semibold">
             <li className="cursor-pointer hover:text-green-600 duration-300">
