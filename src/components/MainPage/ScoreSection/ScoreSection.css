@@ -288,26 +288,81 @@
   .business-rating-card .business-rating-content .rate-stars-container {
     width: 100%;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
   }
 
   .total-rating-card .business-rating-content {
-    padding: 20px 15px;
+    padding: 10px 15px;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .business-rating-card
     .business-rating-content
     .rate-stars-content:first-of-type {
     border-bottom: 1px solid #e5e5e599;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 
   .business-rating-card .rate-stars-item:not(:last-child) {
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
   }
 
   .business-rating-card .rate-stars-item {
     justify-content: space-between;
+  }
+
+  .business-rating-card .rate-stars-item .rate-stars-num {
+    font-size: 14px;
+  }
+
+  .business-rating-card .rate-stars-item .rate-stars svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .business-rating-card .rate-stars-item-average .average-txt {
+    font-size: 15px;
+  }
+
+  .business-rating-card .rate-count .rate-count-num {
+    font-size: 30px;
+  }
+
+  .business-rating-card .rate-count {
+    margin-bottom: 0;
+  }
+
+  .business-rating-card .rate-count {
+    padding: 5px 10px;
+    width: 35%;
+  }
+
+  .business-rating-card {
+    padding: 2px;
+  }
+
+  .business-rating-card.small-card .business-rating-content .rating-card-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .business-rating-card.small-card .business-rating-content .rating-card-title {
+    font-size: 22px;
+  }
+
+  .business-rating-card.small-card
+    .business-rating-content
+    .rating-card-subtitle {
+    font-size: 14px;
+  }
+
+  .business-rating-top {
+    margin-top: 0;
+  }
+
+  .business-rating-card .rate-count .rate-count-title {
+    text-align: center;
   }
 }

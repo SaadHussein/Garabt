@@ -8,8 +8,8 @@ const ScoreSection = () => {
   const country = useStore((state) => state.country);
   const countryCode = useStore((state) => state.countryCode);
   return (
-    <div className="py-10 flex items-center justify-center flex-col">
-      <div className="flex items-center gap-2 mb-4">
+    <div className="py-10 max-[550px]:py-5 flex items-center justify-center flex-col">
+      <div className="flex items-center gap-2 mb-2">
         <div className="flex items-center w-[45px] h-[45px]">
           <Flag code={countryCode} />
         </div>

@@ -3,7 +3,7 @@ import ReviewItem from "./ReviewItem";
 
 const ReviewsSection = () => {
   return (
-    <div className="py-10 flex items-center justify-center flex-col w-full max-w-[1365px] mx-auto">
+    <div className="py-5 flex items-center justify-center flex-col w-full max-w-[1365px] mx-auto">
       <div className="w-full px-5 flex items-center justify-between">
         <div className="flex items-center justify-start gap-2">
           <FaStar color="gold" size={28} />
