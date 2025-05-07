@@ -17,7 +17,7 @@ const ReviewsSection = () => {
           </button>
         </div>
       </div>
-      <div className="w-full flex flex-col items-center justify-center px-5 mt-5">
+      <div className="w-full flex flex-col items-center justify-center px-5 mt-2.5">
         <ReviewItem index={0} />
         <ReviewItem index={1} />
         <ReviewItem index={2} />
