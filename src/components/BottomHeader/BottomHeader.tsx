@@ -4,8 +4,10 @@ import { GoStarFill } from "react-icons/go";
 import { HiMiniBellAlert } from "react-icons/hi2";
 import { FaCompass } from "react-icons/fa6";
 import useStore from "../../store";
+import { useNavigate } from "react-router";
 
 const BottomHeader = () => {
+  const navigate = useNavigate();
   const breakPoint = 1165;
   const startYRef = useRef<number | null>(null);
   const divRef = useRef<HTMLDivElement>(null);
@@ -138,7 +140,12 @@ const BottomHeader = () => {
       >
         <div className="flex justify-between items-center h-full px-4 mx-auto max-w-[775px]">
           <div className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600">
-            <AiFillHome size={width > 320 ? 28 : 22} />
+            <AiFillHome
+              onClick={() => {
+                navigate("/");
+              }}
+              size={width > 320 ? 28 : 22}
+            />
           </div>
           <div className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600">
             <GoStarFill size={width > 320 ? 28 : 22} />
@@ -160,7 +167,12 @@ const BottomHeader = () => {
             <HiMiniBellAlert size={width > 320 ? 28 : 22} />
           </div>
           <div className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600">
-            <FaCompass size={width > 320 ? 28 : 22} />
+            <FaCompass
+              size={width > 320 ? 28 : 22}
+              onClick={() => {
+                navigate("/categories");
+              }}
+            />
           </div>
         </div>
       </div>
