@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 const HeroSection = () => {
   const counrty = useStore((state) => state.country);
   return (
-    <div className="h-[57.5vh] max-[450px]:h-[45vh] relative">
+    <div className="h-[57.5vh] max-[450px]:h-[35vh] relative">
       <div className="absolute top-0 left-0 bg-black opacity-50 w-full h-full z-50"></div>
       <img
         src="/cairo.jpg"

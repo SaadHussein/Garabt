@@ -6,6 +6,10 @@ const ReviewItem = ({ index }: { index: number }) => {
     return arabicRegex.test(text);
   };
 
+  function truncateText(text: string, maxLength = 35) {
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  }
+
   return (
     <div
       className={`my-1 w-full px-2 py-3 ${
@@ -37,8 +41,9 @@ const ReviewItem = ({ index }: { index: number }) => {
           >
             <p className="text-[14px] font-medium">Saaaad</p>
             <p className="text-[12px] font-medium">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt,
-              asperiores.
+              {truncateText(
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, asperiores."
+              )}
             </p>
           </div>
           <div className="flex items-center justify-between w-full mt-1">

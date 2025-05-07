@@ -34,7 +34,7 @@ const ScoreSection = () => {
               <div className="rate-stars-content">
                 <div className="rate-stars-item">
                   <p className="rate-stars-num">
-                    <CountUp end={1_250_000} start={0} duration={3} />
+                    <CountUp end={1250000} start={0} duration={5} />
                   </p>
 
                   <div className="rate-stars">
@@ -48,7 +48,9 @@ const ScoreSection = () => {
                 </div>
 
                 <div className="rate-stars-item">
-                  <p className="rate-stars-num">1.25M</p>
+                  <p className="rate-stars-num">
+                    <CountUp end={1250000} start={0} duration={5} />
+                  </p>
 
                   <div className="rate-stars">
                     <AnimatedStars
@@ -62,7 +64,9 @@ const ScoreSection = () => {
                 </div>
 
                 <div className="rate-stars-item">
-                  <p className="rate-stars-num">1.25M</p>
+                  <p className="rate-stars-num">
+                    <CountUp end={1250000} start={0} duration={5} />
+                  </p>
 
                   <div className="rate-stars">
                     <AnimatedStars
@@ -79,7 +83,9 @@ const ScoreSection = () => {
 
               <div className="rate-stars-content">
                 <div className="rate-stars-item">
-                  <p className="rate-stars-num">1.25M</p>
+                  <p className="rate-stars-num">
+                    <CountUp end={1250000} start={0} duration={5} />
+                  </p>
 
                   <div className="rate-stars">
                     <AnimatedStars
@@ -95,7 +101,9 @@ const ScoreSection = () => {
                 </div>
 
                 <div className="rate-stars-item">
-                  <p className="rate-stars-num">1.25M</p>
+                  <p className="rate-stars-num">
+                    <CountUp end={1250000} start={0} duration={5} />
+                  </p>
 
                   <div className="rate-stars">
                     <AnimatedStars
@@ -114,7 +122,9 @@ const ScoreSection = () => {
                 <div className="rate-stars-item rate-stars-item-average">
                   <h2 className="average-txt">Total Reviews</h2>
 
-                  <p className="rate-stars-num">1.25M</p>
+                  <p className="rate-stars-num">
+                    <CountUp end={1250000} start={0} duration={5} />
+                  </p>
                 </div>
               </div>
             </div>
