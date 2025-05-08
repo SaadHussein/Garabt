@@ -134,7 +134,7 @@ const BottomHeader = () => {
         onMouseDown={handleMouseDown}
         onTouchStart={handleReactTouchStart}
         onTouchMove={handleReactTouchMove}
-        className={`z-1000 h-[60px] bg-green-400 fixed ${
+        className={`z-1000 h-[60px] bg-[linear-gradient(to_right,_#1190d1,_#9AC53F)] fixed ${
           showElement ? "bottom-[40px]" : "bottom-0"
         }  left-0 w-full`}
       >
@@ -154,7 +154,7 @@ const BottomHeader = () => {
             onClick={() => {
               setOpenMobileNavigation(true);
             }}
-            className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600 w-[75px] h-[75px] max-[365px]:w-[60px] max-[365px]:h-[60px] flex justify-center items-center relative bg-green-400 bottom-5 rounded-full border-4 border-white shadow-lg"
+            className="font-semibold text-white duration-300 cursor-pointer hover:text-green-600 w-[75px] h-[75px] max-[365px]:w-[60px] max-[365px]:h-[60px] flex justify-center items-center relative bg-[linear-gradient(to_right,_#1190d1,_#9AC53F)] bottom-5 rounded-full border-4 border-white shadow-lg"
           >
             <img
               src="/pyramids.jpg"
@@ -179,7 +179,7 @@ const BottomHeader = () => {
 
       {showElement ? (
         <div
-          className={`touch-none h-[40px] bg-green-400 text-center w-full fixed bottom-0 left-0 flex justify-center items-center text-white font-semibold text-md max-[465px]:text-sm max-[365px]:text-xs`}
+          className={`touch-none h-[40px] bg-[linear-gradient(to_right,_#1190d1,_#9AC53F)] text-center w-full fixed bottom-0 left-0 flex justify-center items-center text-white font-semibold text-md max-[465px]:text-sm max-[365px]:text-xs`}
         >
           <div className="text-center flex items-center gap-1.5">
             Can't find a listing ?{" "}

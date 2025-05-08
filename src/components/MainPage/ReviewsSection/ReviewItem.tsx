@@ -21,7 +21,7 @@ const ReviewItem = ({ index }: { index: number }) => {
           <img
             src={`https://randomuser.me/api/portraits/thumb/men/75.jpg`}
             alt="user"
-            className="w-12 h-12 rounded-full"
+            className="w-14 h-14 rounded-full border-solid border-2 border-white p-1"
           />
           <div className="flex flex-col items-start justify-start">
             <h1 className="text-sm font-semibold text-white text-[12px]">

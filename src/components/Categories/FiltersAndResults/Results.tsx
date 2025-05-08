@@ -1,19 +1,19 @@
-import Business from "../../MainPage/TopBusinesses/Business";
+import BusinessItem from "../BusinessItem";
 
 const Results = () => {
   return (
     <div>
-      <Business index={0} />
-      <Business index={1} />
-      <Business index={2} />
-      <Business index={3} />
-      <Business index={4} />
-      <Business index={5} />
-      <Business index={6} />
-      <Business index={7} />
-      <Business index={8} />
-      <Business index={9} />
-      <Business index={10} />
+      <BusinessItem index={0} />
+      <BusinessItem index={1} />
+      <BusinessItem index={2} />
+      <BusinessItem index={3} />
+      <BusinessItem index={4} />
+      <BusinessItem index={5} />
+      <BusinessItem index={6} />
+      <BusinessItem index={7} />
+      <BusinessItem index={8} />
+      <BusinessItem index={9} />
+      <BusinessItem index={10} />
     </div>
   );
 };

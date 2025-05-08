@@ -2,12 +2,12 @@ import Category from "./Category";
 
 const CategoryList = () => {
   return (
-    <div className="max-w-[1365px] mx-auto w-full my-5 px-5">
+    <div className="max-w-[1365px] mx-auto w-full mt-5 min-[1165px]:px-5">
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Choose a Category</h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+        <div className="flex items-center justify-center flex-col w-full">
           <Category index={0} title={"Automatives"} />
           <Category index={1} title={"Beauty & Health Clinics"} />
           <Category index={2} title={"Beauty Salons"} />

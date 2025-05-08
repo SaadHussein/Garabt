@@ -1,6 +1,10 @@
 import { FaSearch } from "react-icons/fa";
+import { useSearchParams } from "react-router";
 
 const SearchCategories = () => {
+  const [searchParams] = useSearchParams();
+  const myParam = searchParams.get("category");
+
   return (
     <div className="w-full h-[25vh] relative">
       <div className="absolute top-0 left-0 bg-black opacity-50 w-full h-full z-50"></div>
@@ -11,7 +15,17 @@ const SearchCategories = () => {
       />
       <div className="flex flex-col items-center justify-center mx-[20px] h-full">
         <h1 className="text-white text-3xl text-center font-bold z-50 max-[515px]:text-2xl max-[400px]:text-[20px]">
-          How was your experience?
+          {myParam
+            ?.split("_")
+            .map((word) => {
+              if (!word) return word;
+              if (word === "and") {
+                return "&";
+              } else {
+                return word[0].toUpperCase() + word.slice(1);
+              }
+            })
+            .join(" ")}
         </h1>
 
         <div className="mt-6 z-50 flex items-center justify-center max-w-[450px] w-[100%]">

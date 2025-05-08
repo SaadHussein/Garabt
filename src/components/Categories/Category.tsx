@@ -7,7 +7,15 @@ const Category = ({ index, title }: { index: number; title: string }) => {
     <div
       onClick={() =>
         navigate(
-          "/categories/?category=" + title.split(" ").join("_").toLowerCase()
+          "/categories/?category=" +
+            title
+              .split(" ")
+              .map((word) => {
+                if (word === "&") return "and";
+                return word;
+              })
+              .join("_")
+              .toLowerCase()
         )
       }
       className={`${
@@ -26,10 +34,16 @@ const Category = ({ index, title }: { index: number; title: string }) => {
           : index % 5 === 0
           ? "bg-gray-400"
           : "bg-teal-400"
-      } p-4 rounded cursor-pointer text-white font-semibold text-xl flex items-center justify-between`}
+      } relative px-4 py-6 cursor-pointer text-white font-semibold text-xl flex items-center justify-between w-full`}
     >
-      <p>{title}</p>
-      <FaArrowCircleRight />
+      <img
+        className="absolute w-full h-full inset-0 object-cover opacity-50"
+        loading="lazy"
+        src="/cairo.jpg"
+        alt="background"
+      />
+      <p className="text-white z-10">{title}</p>
+      <FaArrowCircleRight className="text-white z-10" />
     </div>
   );
 };

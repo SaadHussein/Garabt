@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { MdKeyboardArrowDown, MdMenu } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import useStore from "../../store";
 import Flag from "react-world-flags";
 import MobileNavigation from "../MobileNavigation/MobileNavigation";
@@ -66,18 +66,22 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="w-[100%] px-8 h-[75px] bg-green-400 z-[10000] fixed top-0 left-0">
-      <div className="flex justify-between items-center h-full">
+    <nav className="w-[100%] px-8 h-[75px] bg-[linear-gradient(to_right,_#1190d1,_#9AC53F)] z-[10000] fixed top-0 left-0">
+      <div
+        className={`flex ${
+          width > 1165 ? "justify-between" : "justify-center"
+        } items-center h-full`}
+      >
         <img src="/garabt.png" alt="logo" className="w-14 h-14" />
         {width > 1165 ? (
           <ul className="flex items-center space-x-4 text-white font-semibold">
-            <li className="cursor-pointer hover:text-green-600 duration-300">
+            <li className="cursor-pointer hover:text-green-300 duration-300">
               Home
             </li>
-            <li className="cursor-pointer hover:text-green-600 duration-300">
+            <li className="cursor-pointer hover:text-green-300 duration-300">
               Browse Companies
             </li>
-            <li className="cursor-pointer hover:text-green-600 duration-300">
+            <li className="cursor-pointer hover:text-green-300 duration-300">
               Suggest A Business
             </li>
             <li
@@ -89,7 +93,7 @@ const Header = () => {
                   setShowBussinesModal(true);
                 }
               }}
-              className="relative flex items-center gap-1 cursor-pointer hover:text-green-600 duration-300"
+              className="relative flex items-center gap-1 cursor-pointer hover:text-green-300 duration-300"
             >
               Manage Your Business
               <MdKeyboardArrowDown size={16} className="mt-[3px]" />
@@ -108,7 +112,7 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li className="cursor-pointer hover:text-green-600 duration-300">
+            <li className="cursor-pointer hover:text-green-300 duration-300">
               Blog
             </li>
 
@@ -172,13 +176,6 @@ const Header = () => {
           </ul>
         ) : (
           <>
-            <MdMenu
-              size={36}
-              className="cursor-pointer duration-300 text-white hover:text-green-600"
-              onClick={() => {
-                setOpenMobileNavigation(true);
-              }}
-            />
             <MobileNavigation
               openMobileNavigation={openMobileNavigation}
               setOpenMobileNavigation={setOpenMobileNavigation}
