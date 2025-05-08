@@ -1,5 +1,4 @@
 import { FaStar } from "react-icons/fa6";
-import { useEffect, useState } from "react";
 
 const Business = ({ index }: { index: number }) => {
   return (
