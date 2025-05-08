@@ -8,7 +8,6 @@ const Categories = () => {
   const [searchParams] = useSearchParams();
   const myParam = searchParams.get("category");
 
-  console.log(myParam);
   return (
     <div className="pt-[75px]">
       {myParam === null ? (

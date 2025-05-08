@@ -284,7 +284,24 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 995px) {
+  .business-rating-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .business-rating-card.total-rating-card {
+    flex: 1;
+  }
+
+  .business-rating-card.small-card .business-rating-content .rating-card-img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .business-rating-card .business-rating-content .rate-stars-container {
     width: 100%;
     flex-direction: column;
@@ -344,18 +361,18 @@
   }
 
   .business-rating-card.small-card .business-rating-content .rating-card-img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 
   .business-rating-card.small-card .business-rating-content .rating-card-title {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .business-rating-card.small-card
     .business-rating-content
     .rating-card-subtitle {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .business-rating-top {
@@ -364,5 +381,49 @@
 
   .business-rating-card .rate-count .rate-count-title {
     text-align: center;
+  }
+
+  .business-rating-card .business-rating-content {
+    padding: 3px 6px;
+  }
+
+  .padding-in-small-screens {
+    padding: 6px !important;
+  }
+
+  .business-rating-card.small-card .business-rating-content .rating-card-title {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .business-rating-card .rate-stars-item-average .average-txt {
+    font-size: 12px;
+  }
+
+  .business-rating-card .rate-stars-item .rate-stars-num {
+    font-size: 12px;
+  }
+
+  .business-rating-card .rate-count .rate-count-num {
+    font-size: 21px;
+  }
+
+  .business-rating-card .rate-count .rate-count-title {
+    font-size: 14px;
+  }
+
+  .business-rating-card .rate-stars-item .rate-stars svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .business-rating-card.small-card .business-rating-content .rating-card-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .business-rating-card.small-card .business-rating-content .rating-card-title {
+    font-size: 14px;
   }
 }

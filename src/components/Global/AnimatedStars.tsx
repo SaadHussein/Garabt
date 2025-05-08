@@ -12,7 +12,7 @@ const AnimatedStars = ({
   delay: number;
   numberOfStars: number;
   gap?: boolean;
-  size?: number;
+  size?: number | string;
 }) => {
   const [filled, setFilled] = useState(0);
 
