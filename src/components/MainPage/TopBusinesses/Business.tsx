@@ -2,14 +2,6 @@ import { FaStar } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
 const Business = ({ index }: { index: number }) => {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <div
       className={`w-full px-2 min-[1165px]:px-4 py-3 ${
