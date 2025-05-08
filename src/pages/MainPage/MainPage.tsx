@@ -8,8 +8,8 @@ const MainPage = () => {
     <div className="pt-[75px]">
       <HeroSection />
       <ScoreSection />
-      <ReviewsSection />
       <TopBusinesses />
+      <ReviewsSection />
     </div>
   );
 };
