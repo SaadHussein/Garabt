@@ -36,18 +36,18 @@ const Filters = () => {
         } bg-white`}
       >
         <div className="flex items-center gap-0.5">
-          <button className="flex-1 cursor-pointer bg-gray-700 duration-300 hover:bg-gray-800 py-4 text-white font-semibold text-lg">
+          <button className="flex-1 cursor-pointer bg-gray-700 duration-300 hover:bg-gray-800 py-4 text-white font-semibold text-lg max-[500px]:text-[14px]">
             Filters
           </button>
           <button
             onClick={() => {
               navigate("/categories");
             }}
-            className="flex-1 cursor-pointer bg-gray-700 duration-300 hover:bg-gray-800 py-4 text-white font-semibold text-lg"
+            className="flex-1 cursor-pointer bg-gray-700 duration-300 hover:bg-gray-800 py-4 text-white font-semibold text-lg max-[500px]:text-[14px]"
           >
             Category
           </button>
-          <button className="flex-1 cursor-pointer bg-gray-700 duration-300 hover:bg-gray-800 py-4 text-white font-semibold text-lg">
+          <button className="flex-1 cursor-pointer bg-gray-700 duration-300 hover:bg-gray-800 py-4 text-white font-semibold text-lg max-[500px]:text-[14px]">
             Reset
           </button>
         </div>

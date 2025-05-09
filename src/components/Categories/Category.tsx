@@ -3,9 +3,10 @@ import { useNavigate } from "react-router";
 
 const Category = ({ index, title }: { index: number; title: string }) => {
   const navigate = useNavigate();
+
   return (
     <div
-      onClick={() =>
+      onClick={() => {
         navigate(
           "/categories/?category=" +
             title
@@ -16,8 +17,8 @@ const Category = ({ index, title }: { index: number; title: string }) => {
               })
               .join("_")
               .toLowerCase()
-        )
-      }
+        );
+      }}
       className={`${
         index % 7 === 0
           ? "bg-[linear-gradient(to_right,_#d1cc84,_#da4b42)]"
