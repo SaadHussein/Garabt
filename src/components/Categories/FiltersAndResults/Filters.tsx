@@ -13,7 +13,7 @@ const Filters = () => {
       },
       {
         threshold: 0,
-        rootMargin: "-75px 0px 0px 0px",
+        rootMargin: "-90px 0px 0px 0px",
       }
     );
 
@@ -29,7 +29,7 @@ const Filters = () => {
   }, []);
   return (
     <>
-      <div ref={ref} className="relative bottom-[200px]"></div>
+      <div ref={ref} className="relative bottom-[0px]"></div>
       <div
         className={`${
           isSticky ? "fixed top-[75px] left-0 right-0 z-50" : "relative"
