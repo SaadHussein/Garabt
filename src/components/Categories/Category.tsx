@@ -19,25 +19,25 @@ const Category = ({ index, title }: { index: number; title: string }) => {
         )
       }
       className={`${
-        index % 6 === 0
-          ? "bg-red-400"
-          : index % 6 === 1
-          ? "bg-blue-400"
-          : index % 6 === 2
-          ? "bg-green-400"
-          : index % 6 === 3
-          ? "bg-yellow-400"
-          : index % 6 === 4
-          ? "bg-purple-400"
-          : index % 6 === 5
-          ? "bg-pink-400"
-          : index % 5 === 0
-          ? "bg-gray-400"
+        index % 7 === 0
+          ? "bg-[linear-gradient(to_right,_#d1cc84,_#da4b42)]"
+          : index % 7 === 1
+          ? "bg-[linear-gradient(to_right,_#79d6f4,_#a644cc)]"
+          : index % 7 === 2
+          ? "bg-[linear-gradient(to_right,_#5f9e89,_#d0af57)]"
+          : index % 7 === 3
+          ? "bg-[linear-gradient(to_right,_#ead59b,_#e372a2)]"
+          : index % 7 === 4
+          ? "bg-[linear-gradient(to_right,_#b583b8,_#746cc5)]"
+          : index % 7 === 5
+          ? "bg-[linear-gradient(to_right,_#81b0e1,_#689fb3)]"
+          : index % 7 === 6
+          ? "bg-[linear-gradient(to_right,_#39a692,_#93c89d)]"
           : "bg-teal-400"
-      } relative px-4 py-6 cursor-pointer text-white font-semibold text-xl flex items-center justify-between w-full`}
+      } relative px-4 py-8 cursor-pointer text-white font-semibold text-xl flex items-center justify-between w-full`}
     >
       <img
-        className="absolute w-full h-full inset-0 object-cover opacity-50"
+        className="absolute w-full h-full inset-0 object-cover opacity-35"
         loading="lazy"
         src="/cairo.jpg"
         alt="background"

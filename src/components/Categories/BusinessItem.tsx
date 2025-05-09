@@ -14,15 +14,15 @@ const BusinessItem = ({ index }: { index: number }) => {
   return (
     <div
       className={`my-1 w-full px-2 min-[1165px]:px-4 py-3 ${
-        index % 2 !== 0 ? "bg-green-400" : "bg-blue-400"
-      } rounded-md`}
+        index % 2 !== 0 ? "bg-[#1190d1]" : "bg-[#9AC53F]"
+      } min-[1165px]:rounded-md`}
     >
       <div className="flex items-center justify-between w-full h-full gap-6 max-[400px]:gap-3">
         <div>
           <img
             src="/bmwLogo.jpg"
             alt="company logo"
-            className="rounded-md w-14 h-14"
+            className="rounded-md w-15 h-15 p-1 border-1 border-solid border-white"
           />
         </div>
         <div className="flex flex-col items-start justify-start flex-1 w-full h-full">

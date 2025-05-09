@@ -3,7 +3,7 @@ import Business from "./Business";
 
 const TopBusinesses = () => {
   return (
-    <div className="py-5 flex items-center justify-center flex-col w-full max-w-[1365px] mx-auto min-[1365px]:px-5">
+    <div className="py-5 flex items-center justify-center flex-col w-full max-w-[1365px] mx-auto min-[1165px]:px-5">
       <div className="w-full px-5 flex items-center justify-center gap-2 bg-amber-300 py-3">
         <FaFireFlameCurved size={30} color="white" />
         <p className="font-bold text-2xl text-white">Top 3 Businesses</p>

@@ -1,7 +1,7 @@
 import HeroSection from "../../components/MainPage/HeroSection";
 import ReviewsSection from "../../components/MainPage/ReviewsSection/ReviewsSection";
-import ScoreSection from "../../components/MainPage/ScoreSection/ScoreSection";
-import TopBusinesses from "../../components/MainPage/TopBusinesses/TopBusinesses";
+import ScoreSection from "../../components/Global/ScoreSection/ScoreSection";
+import TopBusinesses from "../../components/Global/TopBusinesses/TopBusinesses";
 
 const MainPage = () => {
   return (
